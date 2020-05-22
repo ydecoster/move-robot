@@ -1,0 +1,15 @@
+Petite information concernant la focale des objectifs du capteur :
+elle est de 969 pixels
+
+Donc si je reprends l'équation qui donne la distance en Z des objets dans la scène D=f*E/delta
+alors D=(969/delta)*6
+
+D est alors en cm (car E est 6cm) et delta est directement en pixel (selon l'horizontale)
+
+Attention : le calibrage que je viens de faire est pour une image de résolution 640*480
+
+Donc si vous utiliser des images  de résolution 320*240 il faudra diviser par 2 la distance D calculée.
+
+Dans un exemple :
+
+j'ai deux images 364x288 (jointes) alors mon visage est = ((6*969/(202-153))/640)*364=67cm

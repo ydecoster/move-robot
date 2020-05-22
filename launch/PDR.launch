@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- turtlebot bringup minimal -->
+  <include file="$(find turtlebot_bringup)/launch/minimal.launch" />
+
+  <!-- detection de qr codes  -->
+  <node pkg="move_robot" type="qrcodes" name="qrcodes" output="screen"/>
+  <!-- mouvement du robot  -->
+  <node pkg="move_robot" type="qr_movement" name="qr_movement" output="screen"/>
+
+  <!-- node pkg="move_robot" type="move" name="move" output="screen">
+      <param name="linear_speed" value="0.2" />
+      <param name="angular_speed" value="1.2" />
+  </node -->
+
+
+</launch>
